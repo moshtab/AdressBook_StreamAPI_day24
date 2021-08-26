@@ -35,6 +35,15 @@ public class AddressBook {
 		System.out.println("Adding contact details for adressBook2");
 		adressBook2.addContact();
 
+		// searching for Name is present or not
+		for (Contact i : list) {
+			if (i.firstName.contains("Mohsin")) {
+				System.out.println("Name found :" + i.firstName);
+			} else {
+				System.out.println("No match");
+			}
+		}
+
 		// using stream to Display the contacts
 		System.out.println("Displaying the contacts of contactPersons");
 		List<Contact> result = list.stream().collect(Collectors.toList());
