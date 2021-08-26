@@ -17,6 +17,7 @@ public class AddressBook {
 		ArrayList<Contact> list = new ArrayList<Contact>();
 
 		AddressBook adressBook = new AddressBook(list);
+		AddressBook adressBook2 = new AddressBook(list);
 
 		// Adding contact1 in addressBook
 		System.out.println("Adding contact1 details");
@@ -29,7 +30,10 @@ public class AddressBook {
 		list.set(0, adressBook.editContact());
 		// Delete contact1
 		list.remove(0);
-		
+
+		// Added Multiple addressBooks
+		System.out.println("Adding contact details for adressBook2");
+		adressBook2.addContact();
 
 		// using stream to Display the contacts
 		System.out.println("Displaying the contacts of contactPersons");
