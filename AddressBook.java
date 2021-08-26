@@ -18,6 +18,9 @@ public class AddressBook {
 
 		AddressBook adressBook = new AddressBook(list);
 
+		// Adding contact1 in addressBook
+		adressBook.addContact();
+		// Adding contact2 in addressBook
 		adressBook.addContact();
 
 		// using stream to list the elements
@@ -48,9 +51,9 @@ public class AddressBook {
 
 		System.out.println("Enter the Zip");
 		String zip = s.nextLine();
-		Contact contact1 = new Contact(firstName, lastName, city, state, email, phoneNumber, zip);
+		Contact contact = new Contact(firstName, lastName, city, state, email, phoneNumber, zip);
 
-		list.add(contact1);
+		list.add(contact);
 
 	}
 }
