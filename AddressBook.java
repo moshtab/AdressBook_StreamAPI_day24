@@ -19,16 +19,20 @@ public class AddressBook {
 		AddressBook adressBook = new AddressBook(list);
 
 		// Adding contact1 in addressBook
-		System.out.println("Displaying contact1 details");
+		System.out.println("Adding contact1 details");
 		adressBook.addContact();
 		// Adding contact2 in addressBook
-		System.out.println("Displaying contact2 details");
+		System.out.println("Adding contact2 details");
 		adressBook.addContact();
 		// Editing contact1
 		System.out.println("Editing Contact1 details");
 		list.set(0, adressBook.editContact());
+		// Delete contact1
+		list.remove(0);
+		
 
-		// using stream to list the elements
+		// using stream to Display the contacts
+		System.out.println("Displaying the contacts of contactPersons");
 		List<Contact> result = list.stream().collect(Collectors.toList());
 		System.out.println(result);
 
